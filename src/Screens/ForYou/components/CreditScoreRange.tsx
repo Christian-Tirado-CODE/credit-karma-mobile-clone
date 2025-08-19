@@ -48,9 +48,9 @@ const CreditScoreRange = ({ creditScore }: Props) => {
 
       setOffset((6 + width1 + width2 + width3 + width4) * percentage);
     } else if (creditScore > 799) {
-      const percentage = (creditScore - 800) / 850;
+      const percentage = creditScore / 850;
 
-      setOffset((8 + width1 + width2 + width3 + width4) * percentage);
+      setOffset((8 + width1 + width2 + width3 + width4 + width5) * percentage);
     }
   }, [width1, width2, width3, width4, width5, creditScore]);
 
