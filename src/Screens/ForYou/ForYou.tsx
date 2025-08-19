@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 import CreditScoreRange from "./components/CreditScoreRange";
+import { COLORS } from "../../theme";
 
 const ForYou = () => {
+  const CREDIT_SCORE = 800;
   return (
     <View
       style={{
@@ -17,7 +19,9 @@ const ForYou = () => {
               Cash
             </Text>
             <Text style={{ fontWeight: "700", fontSize: 24 }}>$--</Text>
-            <Text style={{ fontWeight: "700", fontSize: 14, color: "#008600" }}>
+            <Text
+              style={{ fontWeight: "700", fontSize: 14, color: COLORS.primary }}
+            >
               Connect account
             </Text>
           </View>
@@ -39,14 +43,16 @@ const ForYou = () => {
               TransUnion
             </Text>
             <Text style={{ fontWeight: "700", fontSize: 24 }}>800</Text>
-            <Text style={{ fontWeight: "700", fontSize: 14, color: "#008600" }}>
+            <Text
+              style={{ fontWeight: "700", fontSize: 14, color: COLORS.primary }}
+            >
               6 pts
             </Text>
-            <CreditScoreRange />
+            <CreditScoreRange creditScore={CREDIT_SCORE} />
           </View>
 
           <View
-            style={{...styles.column, ...styles.leftBorder, paddingLeft: 20 }}
+            style={{ ...styles.column, ...styles.leftBorder, paddingLeft: 20 }}
           >
             <Text style={{ fontWeight: "500", fontSize: 14, marginBottom: 3 }}>
               Equifax
@@ -56,7 +62,7 @@ const ForYou = () => {
               {" "}
               -- No change
             </Text>
-            <CreditScoreRange />
+            <CreditScoreRange creditScore={CREDIT_SCORE} />
           </View>
         </View>
       </View>

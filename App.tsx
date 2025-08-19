@@ -18,6 +18,7 @@ import { Foundation } from "@react-native-vector-icons/foundation";
 import { MaterialDesignIcons } from "@react-native-vector-icons/material-design-icons";
 import { Ionicons } from "@react-native-vector-icons/ionicons";
 import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6";
+import { COLORS } from "./src/theme";
 
 const Tab = createBottomTabNavigator();
 
@@ -44,7 +45,7 @@ function AppContent() {
               tabBarIcon: ({ color, size }) => (
                 <Foundation name="clipboard-notes" color={color} size={size} />
               ),
-              tabBarActiveTintColor: "#008600",
+              tabBarActiveTintColor: COLORS.primary,
             }}
           />
           <Tab.Screen
@@ -58,7 +59,7 @@ function AppContent() {
                   size={size}
                 />
               ),
-              tabBarActiveTintColor: "#008600",
+              tabBarActiveTintColor: COLORS.primary,
             }}
           />
           <Tab.Screen
@@ -72,7 +73,7 @@ function AppContent() {
                   size={size}
                 />
               ),
-              tabBarActiveTintColor: "#008600",
+              tabBarActiveTintColor: COLORS.primary,
             }}
           />
           <Tab.Screen
@@ -82,7 +83,7 @@ function AppContent() {
               tabBarIcon: ({ color, size }) => (
                 <Ionicons name="shield-checkmark" color={color} size={size} />
               ),
-              tabBarActiveTintColor: "#008600",
+              tabBarActiveTintColor: COLORS.primary,
             }}
           />
           <Tab.Screen
@@ -92,7 +93,7 @@ function AppContent() {
               tabBarIcon: ({ color, size }) => (
                 <FontAwesome6 name="money-bill-1" color={color} size={size} />
               ),
-              tabBarActiveTintColor: "#008600",
+              tabBarActiveTintColor: COLORS.primary,
             }}
           />
         </Tab.Navigator>
